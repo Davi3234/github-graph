@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  github-graph:
+    build: .
+    volumes:
+      - ./:/app
+    tty: true
+    stdin_open: true
+    command: ["python", "main.py"]
