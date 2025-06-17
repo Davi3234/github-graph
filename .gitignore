@@ -1,1 +1,2 @@
-grafo_colaboracao.png
+assets/*
+!.gitkeep
