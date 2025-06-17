@@ -68,7 +68,7 @@ def main():
     plt.title("Rede de Colaboração entre Desenvolvedores (PushEvent)")
     plt.axis("off")
     plt.tight_layout()
-    plt.savefig("/app/grafo_colaboracao.png")
+    plt.savefig("/app/assets/grafo_colaboracao.png")
     print("Visualização salva em 'grafo_colaboracao.png'")
 
 if __name__ == "__main__":
