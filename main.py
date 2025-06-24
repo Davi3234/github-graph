@@ -79,12 +79,8 @@ def save_graph():
 
     print(f"--\nVisualização salva em '{NAME}'")
 
-def main():
-    events = download_and_parse(DATABASE_URL)
-
-    G = build_graph(events)
-
-    degrees = dict(G.degree())
+def load_degrees(graph):
+    degrees = dict(graph.degree())
 
     degree_to_users = {}
 
@@ -94,6 +90,15 @@ def main():
 
         degree_to_users[degree].append(user)
 
+    return degree_to_users, degrees
+
+
+def main():
+    events = download_and_parse(DATABASE_URL)
+
+    G = build_graph(events)
+    degree_to_users, degrees = load_degrees(G)
+    
     interprete_graph(G, degree_to_users)
     draw_graph(G, degrees)
     save_graph()
