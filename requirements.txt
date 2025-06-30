@@ -2,3 +2,5 @@ requests
 networkx
 matplotlib
 scipy
+pandas
+python-louvain
